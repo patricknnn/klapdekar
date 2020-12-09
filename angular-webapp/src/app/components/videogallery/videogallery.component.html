@@ -1,0 +1,128 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <app-header
+        title="Klappers"
+        subtitle="Hier vind u verse klappers op een assortiment aan games."
+        icon="slideshow"
+      ></app-header>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-9 col-9">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-sm-12 p-0">
+            <mat-expansion-panel class="bg-light mat-elevation-z4 mb-2 mr-2">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <mat-icon class="mr-2">category</mat-icon>
+                  Player
+                </mat-panel-title>
+                <mat-panel-description *ngIf="activeFilters.players.length">
+                  <span class="badge rounded-pill bg-secondary txt-light">{{
+                    activeFilters.players.length
+                  }}</span>
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <mat-selection-list
+                #categorylist
+                [(ngModel)]="activeFilters.players"
+                (ngModelChange)="updateFilters()"
+              >
+                <mat-list-option
+                  color="primary"
+                  checkboxPosition="after"
+                  *ngFor="let player of players"
+                  [value]="player"
+                >
+                  {{ player }}
+                </mat-list-option>
+              </mat-selection-list>
+            </mat-expansion-panel>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12 p-0">
+            <mat-expansion-panel class="bg-light mat-elevation-z4 mb-2 mr-2">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <mat-icon class="mr-2">brush</mat-icon>
+                  Game
+                </mat-panel-title>
+                <mat-panel-description *ngIf="activeFilters.games.length">
+                  <span class="badge rounded-pill bg-secondary txt-light">{{
+                    activeFilters.games.length
+                  }}</span>
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+              <mat-selection-list
+                #paintlist
+                [(ngModel)]="activeFilters.games"
+                (ngModelChange)="updateFilters()"
+              >
+                <mat-list-option
+                  color="primary"
+                  checkboxPosition="after"
+                  *ngFor="let game of games"
+                  [value]="game"
+                >
+                  {{ game }}
+                </mat-list-option>
+              </mat-selection-list>
+            </mat-expansion-panel>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-xl-2 col-lg-2 col-md-2 col-sm-3 col-3">
+      <div class="d-flex justify-content-end">
+        <button
+          mat-raised-button
+          class="reset-button bg-light mat-elevation-z4"
+          (click)="resetFilters(); closeExpansionPanels()"
+        >
+          <mat-icon color="primary">replay</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div #shuffleContainer class="shuffle-container row my-4">
+    <div
+      *ngFor="let video of videos"
+      class="shuffle-item col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 my-3"
+      [attr.data-game]="video.game"
+      [attr.data-player]="video.player"
+    >
+      <mat-card class="example-card mb-5">
+        <mat-card-header>
+          <div mat-card-avatar><mat-icon>play_circle_outline</mat-icon></div>
+          <mat-card-title>{{ video.title }}</mat-card-title>
+          <mat-card-subtitle>{{ video.player }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <iframe
+            width="100%"
+            height="auto"
+            [src]="video.url | safe: 'resourceUrl'"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen
+          ></iframe>
+          <mat-chip-list>
+            <mat-chip color="primary" selected>{{ video.game }}</mat-chip>
+            <mat-chip color="accent" selected>{{ video.player }}</mat-chip>
+          </mat-chip-list>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+    <div #shuffleSizer class="sizer-element col-1"></div>
+  </div>
+</div>

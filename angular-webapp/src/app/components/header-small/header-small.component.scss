@@ -1,0 +1,37 @@
+
+$title-size: 30px;
+
+.header-small-container {
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  padding: 20px 0px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.header-small-title-container {
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.header-small-title-icon {
+  height: $title-size;
+  width: $title-size;
+  font-size: $title-size;
+  vertical-align: center;
+}
+
+.header-small-title-text {
+  color: rgba(0,0,0,.87);
+  font-size: $title-size;
+  font-weight: 400;
+  margin: 0px;
+}
+
+.header-small-subtitle-text {
+  margin-bottom: 0px;
+  padding-right: 40px;
+  max-width: 700px;
+  font-size: 16px;
+  color: rgba(0,0,0,.6);
+}
