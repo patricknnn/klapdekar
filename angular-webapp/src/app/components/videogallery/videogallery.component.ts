@@ -16,7 +16,7 @@ export class VideogalleryComponent implements OnInit, AfterViewInit {
   @ViewChildren(MatExpansionPanel) expansionPanels: QueryList<MatExpansionPanel>;
   private shuffleInstance: Shuffle;
   videos: Video[];
-  games = ['CoD2', 'CODMW', 'APEX'];
+  games = ['COD2', 'CODMW', 'APEX'];
   players = ['BENNIEMAN', 'KUBEROAL', 'MARTINZIKI', 'ROEL', 'BLOKTASTIC', 'PANINI', 'WARHEAD', 'KRAAKY'];
   activeFilters = {
     games: [],
@@ -58,8 +58,8 @@ export class VideogalleryComponent implements OnInit, AfterViewInit {
   itemPassesFilters(element): boolean {
     var games = this.activeFilters.games;
     var players = this.activeFilters.players;
-    var game = element.getAttribute('data-player');
-    var player = element.getAttribute('data-game');
+    var game = element.getAttribute('data-game');
+    var player = element.getAttribute('data-player');
     // Games
     if (games.length > 0 && !games.includes(game)) {
       return false;
