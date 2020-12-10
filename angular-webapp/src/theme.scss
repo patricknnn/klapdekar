@@ -4,8 +4,8 @@
 @include mat-core();
 
 // Light theme.
-$light-primary: mat-palette($mat-teal);
-$light-accent: mat-palette($mat-amber);
+$light-primary: mat-palette($mat-blue);
+$light-accent: mat-palette($mat-deep-purple);
 $light-warn: mat-palette($mat-deep-orange);
 $light-theme: mat-light-theme(
   (
@@ -18,7 +18,7 @@ $light-theme: mat-light-theme(
 );
 
 // Dark theme.
-$dark-primary: mat-palette($mat-indigo);
+$dark-primary: mat-palette($mat-blue);
 $dark-accent: mat-palette($mat-deep-purple);
 $dark-warn: mat-palette($mat-deep-orange);
 $dark-theme: mat-dark-theme(

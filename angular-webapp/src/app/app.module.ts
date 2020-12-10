@@ -20,6 +20,7 @@ import { FormsComponent } from './components/forms/forms.component';
 import { VideogalleryComponent } from './components/videogallery/videogallery.component';
 import { AddvideoComponent } from './components/addvideo/addvideo.component';
 import { SafePipe } from 'src/safe-pipe.pipe';
+import { MastheadComponent } from './components/masthead/masthead.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { SafePipe } from 'src/safe-pipe.pipe';
     FormsComponent,
     VideogalleryComponent,
     AddvideoComponent,
-    SafePipe
+    SafePipe,
+    MastheadComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,9 @@
+// Theme
+$custom-purple: #fe01ab;
+$custom-purple-dark: #c6007c;
+$custom-cyan: #46e5e5;
+$custom-cyan-dark: #00b2b3;
+$custom-gradient: linear-gradient(60deg, $custom-purple, $custom-cyan);
 
 /* Material */
 $color-red: #f44336;
@@ -79,8 +85,8 @@ $color-gradient-bluegrey: linear-gradient(
 );
 
 /* Dark & Light */
-$color-dark: #272727;
-$color-dark-secondary: #212121;
+$color-dark: #202124;
+$color-dark-secondary: #303030;
 $color-black: #000;
 $color-black-muted: rgba(0, 0, 0, 0.65);
 $color-light: #fafafa;
@@ -104,10 +110,10 @@ $color-instagram: #f09433;
 $color-twitter: #55acee;
 
 /* Theme */
-$color-primary: $color-bluegrey;
-$color-primary-dark: $color-bluegrey-dark;
-$color-accent: $color-teal;
-$color-gradient-primary: $color-gradient-bluegrey;
+$color-primary: $color-blue;
+$color-primary-dark: $color-blue-dark;
+$color-accent: $color-deeppurple;
+$color-gradient-primary: $custom-gradient;
 
 /*************************************/
 /**          Color Helpers          **/
@@ -125,255 +131,255 @@ $color-gradient-primary: $color-gradient-bluegrey;
   background-color: $color-accent !important;
 }
 .bg-red {
-  background-color: $color-red;
+  background-color: $color-red !important;
 }
 .bg-red-dark {
-  background-color: $color-red-dark;
+  background-color: $color-red-dark !important;
 }
 .bg-purple {
-  background-color: $color-purple;
+  background-color: $color-purple !important;
 }
 .bg-purple-dark {
-  background-color: $color-purple-dark;
+  background-color: $color-purple-dark !important;
 }
 .bg-deeppurple {
-  background-color: $color-deeppurple;
+  background-color: $color-deeppurple !important;
 }
 .bg-deeppurple-dark {
-  background-color: $color-deeppurple-dark;
+  background-color: $color-deeppurple-dark !important;
 }
 .bg-indigo {
-  background-color: $color-indigo;
+  background-color: $color-indigo !important;
 }
 .bg-indigo-dark {
-  background-color: $color-indigo-dark;
+  background-color: $color-indigo-dark !important;
 }
 .bg-blue {
-  background-color: $color-blue;
+  background-color: $color-blue !important;
 }
 .bg-blue-dark {
-  background-color: $color-blue-dark;
+  background-color: $color-blue-dark !important;
 }
 .bg-cyan {
-  background-color: $color-cyan;
+  background-color: $color-cyan !important;
 }
 .bg-cyan-dark {
-  background-color: $color-cyan-dark;
+  background-color: $color-cyan-dark !important;
 }
 .bg-teal {
-  background-color: $color-teal;
+  background-color: $color-teal !important;
 }
 .bg-teal-dark {
-  background-color: $color-teal-dark;
+  background-color: $color-teal-dark !important;
 }
 .bg-green {
-  background-color: $color-green;
+  background-color: $color-green !important;
 }
 .bg-green-dark {
-  background-color: $color-green-dark;
+  background-color: $color-green-dark !important;
 }
 .bg-lightgreen {
-  background-color: $color-lightgreen;
+  background-color: $color-lightgreen !important;
 }
 .bg-lightgreen-dark {
-  background-color: $color-lightgreen-dark;
+  background-color: $color-lightgreen-dark !important;
 }
 .bg-yellow {
-  background-color: $color-yellow;
+  background-color: $color-yellow !important;
 }
 .bg-yellow-dark {
-  background-color: $color-yellow-dark;
+  background-color: $color-yellow-dark !important;
 }
 .bg-amber {
-  background-color: $color-amber;
+  background-color: $color-amber !important;
 }
 .bg-amber-dark {
-  background-color: $color-amber-dark;
+  background-color: $color-amber-dark !important;
 }
 .bg-orange {
-  background-color: $color-orange;
+  background-color: $color-orange !important;
 }
 .bg-orange-dark {
-  background-color: $color-orange-dark;
+  background-color: $color-orange-dark !important;
 }
 .bg-deeporange {
-  background-color: $color-deeporange;
+  background-color: $color-deeporange !important;
 }
 .bg-deeporange-dark {
-  background-color: $color-deeporange-dark;
+  background-color: $color-deeporange-dark !important;
 }
 .bg-grey {
-  background-color: $color-grey;
+  background-color: $color-grey !important;
 }
 .bg-grey-dark {
-  background-color: $color-grey-dark;
+  background-color: $color-grey-dark !important;
 }
 .bg-bluegrey {
-  background-color: $color-bluegrey;
+  background-color: $color-bluegrey !important;
 }
 .bg-bluegrey-dark {
-  background-color: $color-bluegrey-dark;
+  background-color: $color-bluegrey-dark !important;
 }
 .bg-light {
-  background-color: $color-light;
+  background-color: $color-light !important;
 }
 .bg-light-secondary {
-  background-color: $color-light-secondary;
+  background-color: $color-light-secondary !important;
 }
 .bg-dark {
-  background-color: $color-dark;
+  background-color: $color-dark !important;
 }
 .bg-dark-secondary {
-  background-color: $color-dark-secondary;
+  background-color: $color-dark-secondary !important;
 }
 .bg-white {
-  background-color: $color-white;
+  background-color: $color-white !important;
 }
 .bg-white-muted {
-  background-color: $color-white-muted;
+  background-color: $color-white-muted !important;
 }
 .bg-black {
-  background-color: $color-black;
+  background-color: $color-black !important;
 }
 .bg-black-muted {
-  background-color: $color-black-muted;
+  background-color: $color-black-muted !important;
 }
 
 /** Gradients */
 .bg-gradient-primary {
-  background: $color-gradient-primary;
+  background: $color-gradient-primary !important;
 }
 .bg-gradient-accent {
-  background: $color-gradient-amber;
+  background: $color-gradient-amber !important;
 }
 .bg-gradient-light {
-  background: $color-gradient-light;
+  background: $color-gradient-light !important;
 }
 .bg-gradient-dark {
-  background: $color-gradient-dark;
+  background: $color-gradient-dark !important;
 }
 .bg-gradient-red {
-  background: $color-gradient-red;
+  background: $color-gradient-red !important;
 }
 .bg-gradient-purple {
-  background: $color-gradient-purple;
+  background: $color-gradient-purple !important;
 }
 .bg-gradient-deeppurple {
-  background: $color-gradient-deeppurple;
+  background: $color-gradient-deeppurple !important;
 }
 .bg-gradient-indigo {
-  background: $color-gradient-indigo;
+  background: $color-gradient-indigo !important;
 }
 .bg-gradient-blue {
-  background: $color-gradient-blue;
+  background: $color-gradient-blue !important;
 }
 .bg-gradient-cyan {
-  background: $color-gradient-cyan;
+  background: $color-gradient-cyan !important;
 }
 .bg-gradient-teal {
-  background: $color-gradient-teal;
+  background: $color-gradient-teal !important;
 }
 .bg-gradient-green {
-  background: $color-gradient-green;
+  background: $color-gradient-green !important;
 }
 .bg-gradient-lightgreen {
-  background: $color-gradient-lightgreen;
+  background: $color-gradient-lightgreen !important;
 }
 .bg-gradient-yellow {
-  background: $color-gradient-yellow;
+  background: $color-gradient-yellow !important;
 }
 .bg-gradient-amber {
-  background: $color-gradient-amber;
+  background: $color-gradient-amber !important;
 }
 .bg-gradient-orange {
-  background: $color-gradient-orange;
+  background: $color-gradient-orange !important;
 }
 .bg-gradient-deeporange {
-  background: $color-gradient-deeporange;
+  background: $color-gradient-deeporange !important;
 }
 .bg-gradient-grey {
-  background: $color-gradient-grey;
+  background: $color-gradient-grey !important;
 }
 .bg-gradient-bluegrey {
-  background: $color-gradient-bluegrey;
+  background: $color-gradient-bluegrey !important;
 }
 
 /** Text */
 .txt-primary {
-  color: $color-primary;
+  color: $color-primary !important;
 }
 .txt-primary-dark {
-  color: $color-primary-dark;
+  color: $color-primary-dark !important;
 }
 .txt-accent {
-  color: $color-accent;
+  color: $color-accent !important;
 }
 .txt-red {
-  color: $color-red;
+  color: $color-red !important;
 }
 .txt-purple {
-  color: $color-purple;
+  color: $color-purple !important;
 }
 .txt-deeppurple {
-  color: $color-deeppurple;
+  color: $color-deeppurple !important;
 }
 .txt-indigo {
-  color: $color-indigo;
+  color: $color-indigo !important;
 }
 .txt-blue {
-  color: $color-blue;
+  color: $color-blue !important;
 }
 .txt-cyan {
-  color: $color-cyan;
+  color: $color-cyan !important;
 }
 .txt-teal {
-  color: $color-teal;
+  color: $color-teal !important;
 }
 .txt-green {
-  color: $color-green;
+  color: $color-green !important;
 }
 .txt-lightgreen {
-  color: $color-lightgreen;
+  color: $color-lightgreen !important;
 }
 .txt-yellow {
-  color: $color-yellow;
+  color: $color-yellow !important;
 }
 .txt-amber {
-  color: $color-amber;
+  color: $color-amber !important;
 }
 .txt-orange {
-  color: $color-orange;
+  color: $color-orange !important;
 }
 .txt-deeporange {
-  color: $color-deeporange;
+  color: $color-deeporange !important;
 }
 .txt-grey {
-  color: $color-grey;
+  color: $color-grey !important;
 }
 .txt-bluegrey {
-  color: $color-bluegrey;
+  color: $color-bluegrey !important;
 }
 .txt-white {
-  color: $color-white;
+  color: $color-white !important;
 }
 .txt-white-muted {
-  color: $color-white-muted;
+  color: $color-white-muted !important;
 }
 .txt-black {
-  color: $color-black;
+  color: $color-black !important;
 }
 .txt-black-muted {
-  color: $color-black-muted;
+  color: $color-black-muted !important;
 }
 .txt-light {
-  color: $color-light;
+  color: $color-light !important;
 }
 .txt-light-muted {
-  color: rgba($color-light, 0.54);
+  color: rgba($color-light, 0.54) !important;
 }
 .txt-dark {
-  color: $color-dark;
+  color: $color-dark !important;
 }
 .txt-dark-muted {
-  color: rgba($color-dark, 0.54);
+  color: rgba($color-dark, 0.54) !important;
 }

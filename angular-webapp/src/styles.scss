@@ -21,7 +21,8 @@ body {
 }
 
 .active {
-  background-color: rgba($color-primary, 0.15) !important;
+  color: $color-primary-dark !important;
+  background-color: rgba($color-dark, 0.1) !important;
 }
 
 .spacer {
