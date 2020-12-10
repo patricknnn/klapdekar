@@ -7,7 +7,6 @@ import { SidenavService } from 'src/app/services/sidenav.service';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
-  username: string;
 
   constructor(
     private sidenav: SidenavService,
