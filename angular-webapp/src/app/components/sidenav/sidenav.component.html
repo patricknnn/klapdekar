@@ -19,7 +19,7 @@
 
       <div *ngFor="let navlink of navlinks" class="navlink-wrapper">
         <!-- Without children -->
-        <a mat-list-item *ngIf="!navlink.children" routerLink="{{navlink.routerLink}}" routerLinkActive="active">
+        <a mat-list-item *ngIf="!navlink.children" (click)="closeSidenav()" routerLink="{{navlink.routerLink}}" routerLinkActive="active" >
           <mat-icon class="material-icons-outlined">{{navlink.icon}}</mat-icon>
           <span class="pl-2">{{navlink.text}}</span>
         </a>
@@ -33,7 +33,7 @@
             </div>
           </mat-expansion-panel-header>
 
-          <a mat-list-item *ngFor="let child of navlink.children" routerLink="{{child.routerLink}}" routerLinkActive="active">
+          <a mat-list-item *ngFor="let child of navlink.children" (click)="closeSidenav()" routerLink="{{child.routerLink}}" routerLinkActive="active">
             <mat-icon class="material-icons-outlined">{{child.icon}}</mat-icon>
             <span class="pl-2">{{child.text}}</span>
           </a>
@@ -48,8 +48,8 @@
     <!-- Seperator -->
     <div class="separator flex-row flex-shrink-0 mb-2"></div>
 
-    <a mat-list-item routerLink="/addvideo">
-      <mat-icon class="material-icons-outlined">add</mat-icon>
+    <a mat-list-item (click)="closeSidenav()" routerLink="/addvideo">
+      <mat-icon class="material-icons-outlined">library_add</mat-icon>
       <span class="pl-2">Klapper toevoegen</span>
     </a>
   </div>

@@ -11,29 +11,18 @@ import { SidenavService } from './services/sidenav.service';
   styleUrls: ['./app.component.scss'],
   animations: [fadeAnimation]
 })
-export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
+export class AppComponent implements OnInit, AfterViewInit {
   @ViewChild('sidenav') public sidenav: MatSidenav;
-  private _mobileQueryListener: () => void;
   title = 'Klap de kar';
-  mobileQuery: MediaQueryList;
   public simplebarOptions: object;
-  loggedIn: boolean;
 
   /**
    * Constructor
-   * @param sidenavService Sidenav service 
-   * @param authService Authentication service
-   * @param changeDetectorRef Change detector
-   * @param media Media
+   * @param sidenavService Sidenav service
    */
   constructor(
-    private sidenavService: SidenavService,
-    changeDetectorRef: ChangeDetectorRef,
-    media: MediaMatcher
+    private sidenavService: SidenavService
   ) {
-    this.mobileQuery = media.matchMedia('(max-width: 600px)');
-    this._mobileQueryListener = () => changeDetectorRef.detectChanges();
-    this.mobileQuery.addEventListener<"change">("change", this._mobileQueryListener);
     this.simplebarOptions = {autoHide: false};
   }
 
@@ -42,10 +31,6 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngAfterViewInit(): void {
     this.sidenavService.setSidenav(this.sidenav);
-  }
-
-  ngOnDestroy(): void {
-    this.mobileQuery.removeEventListener<"change">("change", this._mobileQueryListener);
   }
 
   public getRouterOutletState(outlet) {

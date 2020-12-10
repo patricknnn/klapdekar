@@ -1,1 +1,63 @@
-<p>addvideo works!</p>
+<div class="container pb-5">
+  <div class="row">
+    <div class="col-12">
+      <app-header title="Klapper toevoegen"
+        subtitle="Hier kan je een verse klapper toevoegen, gebruik hiervoor wel de embed url van je youtube smeersel."
+        icon="library_add">
+      </app-header>
+    </div>
+    <div class="col-12">
+      <mat-card class="w-100">
+        <div class="container-fluid">
+          <div [formGroup]="addVideoForm" class="row">
+
+            <div class="col-sm-12 col-md-6 py-1">
+              <mat-form-field appearance="fill" class="w-100">
+                <mat-label>Titel</mat-label>
+                <input matInput placeholder="Titel" name="title" formControlName="title" required>
+                <mat-icon matSuffix>title</mat-icon>
+                <mat-error *ngIf="addVideoForm.controls.title.invalid">{{getErrorMessage()}}</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-sm-12 col-md-6 py-1">
+              <mat-form-field appearance="fill" class="w-100">
+                <mat-label>Embed url</mat-label>
+                <input matInput placeholder="url" name="url" formControlName="url" required>
+                <mat-icon matSuffix>link</mat-icon>
+                <mat-error *ngIf="addVideoForm.controls.url.invalid">{{getErrorMessage()}}</mat-error>
+              </mat-form-field>
+            </div>
+
+            <div class="col-sm-12 col-md-6 py-1">
+              <mat-form-field appearance="fill" class="w-100">
+                <mat-label>Player</mat-label>
+                <mat-select name="player" formControlName="player">
+                  <mat-option *ngFor="let player of players" value="{{player.name}}">{{player.name}}</mat-option>
+                </mat-select>
+                <mat-error *ngIf="addVideoForm.controls.player.invalid">{{getErrorMessage()}}</mat-error>
+              </mat-form-field>
+            </div>
+
+            <div class="col-sm-12 col-md-6 py-1">
+              <mat-form-field appearance="fill" class="w-100">
+                <mat-label>Game</mat-label>
+                <mat-select name="game" formControlName="game">
+                  <mat-option *ngFor="let game of games" value="{{game}}">{{game}}</mat-option>
+                </mat-select>
+                <mat-error *ngIf="addVideoForm.controls.game.invalid">{{getErrorMessage()}}</mat-error>
+              </mat-form-field>
+            </div>
+
+            <div class="col-12 py-1">
+              <div class="d-flex align-items-center justify-content-center w-100">
+                <button mat-raised-button type="submit" [disabled]="!addVideoForm.valid">Submit</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </mat-card>
+    </div>
+  </div>
+
+</div>

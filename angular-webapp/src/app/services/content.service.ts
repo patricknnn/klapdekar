@@ -1,15 +1,15 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { navlinks, videos } from '../MOCKS';
+import { Games, navlinks, players, videos } from '../MOCKS';
 import { Navlink } from '../models/navlink';
+import { Player } from '../models/player';
 import { Video } from '../models/video';
 
 @Injectable({
   providedIn: 'root'
 })
-export class MenuService {
+export class ContentService {
 
-  constructor(private http: HttpClient) {}
+  constructor() { }
 
   getNavlinks(): Navlink[] {
     return navlinks;
@@ -17,5 +17,13 @@ export class MenuService {
 
   getVideos(): Video[] {
     return videos;
+  }
+
+  getPlayers(): Player[] {
+    return players;
+  }
+
+  getGames(): string[] {
+    return Games;
   }
 }

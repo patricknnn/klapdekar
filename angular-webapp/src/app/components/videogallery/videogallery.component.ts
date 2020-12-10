@@ -1,9 +1,9 @@
 import { AfterViewInit, Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { Video } from 'src/app/models/video';
-import { MenuService } from 'src/app/services/menu.service';
 import { DomSanitizer } from '@angular/platform-browser';
 import Shuffle from 'shufflejs';
 import { MatExpansionPanel } from '@angular/material/expansion';
+import { ContentService } from 'src/app/services/content.service';
 
 @Component({
   selector: 'app-videogallery',
@@ -23,10 +23,10 @@ export class VideogalleryComponent implements OnInit, AfterViewInit {
     players: [],
   };
 
-  constructor(private menuService: MenuService, private sanitizer: DomSanitizer) { }
+  constructor(private contentService: ContentService, private sanitizer: DomSanitizer) { }
 
   ngOnInit(): void {
-    this.videos = this.menuService.getVideos();
+    this.videos = this.contentService.getVideos();
   }
 
   ngAfterViewInit(): void {
